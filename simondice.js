@@ -8,12 +8,7 @@ function juego() {
   function siguienteNivel(nivelActual) {
     if (nivelActual == niveles) {
       alert("Ganaste");
-      document.getElementById("form").style.display = "block";
-      document.getElementById("keyboard").style.display = "none";
       getName = prompt("Cual es tu Nombre ? ");
-      document.getElementById("nombre").value = getName;
-      document.getElementById("nivel").value = nivelActual;
-      document.getElementById("puntaje").value = nivelActual * 5;
       window.location.href = "addrating.php?na=" + getName + "&le=" + nivelActual + "&pu=" + nivelActual * 5;
 
 
@@ -41,12 +36,7 @@ function juego() {
           activate(ev.keyCode, { fail: true });
           window.removeEventListener(`keydown`, onkeydown);
           alert(`perdiste`);
-          document.getElementById("form").style.display = "block";
-          document.getElementById("keyboard").style.display = "none";
           getName = prompt("Cual es tu Nombre ? ");
-          document.getElementById("nombre").value = getName;
-          document.getElementById("nivel").value = nivelActual;
-          document.getElementById("puntaje").value = nivelActual * 5;
           window.location.href = "addrating.php?na=" + getName + "&le=" + nivelActual + "&pu=" + nivelActual * 5;
         }
       }
@@ -66,12 +56,7 @@ function juego() {
           activate(ev.target.outerText.charCodeAt(0), { fail: true });
           window.removeEventListener(`click`, onclick);
           alert(`perdiste`);
-          document.getElementById("form").style.display = "block";
-          document.getElementById("keyboard").style.display = "none";
           getName = prompt("Cual es tu Nombre ? ");
-          document.getElementById("nombre").value = getName;
-          document.getElementById("nivel").value = nivelActual;
-          document.getElementById("puntaje").value = nivelActual * 5;
           window.location.href = "addrating.php?na=" + getName + "&le=" + nivelActual + "&pu=" + nivelActual * 5;
 
         }
